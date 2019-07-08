@@ -13,7 +13,7 @@ class App extends Component {
           <div className="form-v10-content">
             <form className="form-detail" action="#" method="post" id="myform">
               <UserInput/>
-              <UserOutput/>
+              <UserOutput title="businessman" fName="Ayman" lName="Albasha" position="Software Engineering" company="Uxbert" business_arena="tech"/>
             </form>
           </div>
         </div>
