@@ -8,6 +8,20 @@ import 'bootstrap/dist/css/bootstrap.css';
 
 
 class App extends Component {
+  constructor(){
+    super();
+    this.state = {
+      firstName: "Ayman"
+    }
+    this.siwtchHandel = this.siwtchHandel.bind(this);
+  }
+  siwtchHandel = () => {
+    console.log("here")
+    this.setState({
+      firstName: "ahmed"
+    })
+
+  }
   render() {
     return (
       <div className="App">
@@ -15,7 +29,7 @@ class App extends Component {
           <div className="form-v10-content">
             <form className="form-detail" action="#" method="post" id="myform">
               <UserInput/>
-              <UserOutput title="businessman" fName="Ayman" lName="Albasha" position="Software Engineering" company="Uxbert" business_arena="tech"  cat="Trainee"/>
+              <UserOutput show={this.siwtchHandel} title="businessman" fName={this.state.firstName} lName="Albasha" position="Software Engineer" company="Uxbert" business_arena="tech" cat="Trainee"/>
             </form>
           </div>
         </div>
