@@ -11,25 +11,57 @@ class App extends Component {
   constructor(){
     super();
     this.state = {
-      firstName: "Ayman"
+      person: [
+        {
+          "title": "businessman",
+          "firstName": "Ayman",
+          "lastNmae": "Albasha",
+          "position": "Software Engineer",
+          "company": "Uxbert",
+          "business_arena": "tech",
+          "catogery": "Trainee"
+        }
+      ]
     }
     this.siwtchHandel = this.siwtchHandel.bind(this);
+    this.handleChangesValues = this.handleChangesValues.bind(this);
   }
   siwtchHandel = () => {
-    console.log("here")
+    console.log("reset state value")
     this.setState({
-      firstName: "ahmed"
+      person: [
+        {
+          "title": "owner",
+          "firstName": "Ahmed",
+          "lastNmae": "hjazi",
+          "position": "Coputer Since",
+          "company": "Innosoft",
+          "business_arena": "tech",
+          "catogery": "Full emplee"
+        }
+      ]
     })
-
+  }
+  handleChangesValues = () => {
+    console.log("handleChangesValues")
   }
   render() {
     return (
       <div className="App">
         <div className="page-content">
           <div className="form-v10-content">
-            <form className="form-detail" action="#" method="post" id="myform">
-              <UserInput/>
-              <UserOutput show={this.siwtchHandel} title="businessman" fName={this.state.firstName} lName="Albasha" position="Software Engineer" company="Uxbert" business_arena="tech" cat="Trainee"/>
+            <form className="form-detail" id="myform">
+              <UserInput onChange={this.handleChangesValues}/>
+              <UserOutput 
+                show={this.siwtchHandel} 
+                title={this.state.person[0].title} 
+                fName={this.state.person[0].firstName} 
+                lName={this.state.person[0].lastNmae} 
+                position={this.state.person[0].position} 
+                company={this.state.person[0].company}
+                business_arena={this.state.person[0].business_arena} 
+                cat={this.state.person[0].catogery} 
+              />
             </form>
           </div>
         </div>

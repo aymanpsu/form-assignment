@@ -4,7 +4,7 @@ class UserOutput extends Component {
   constructor(props) {
     super(props);
     // Just to see what was passed...
-    console.log(props);
+    console.log("output:" + props);
   }
   componentWillMount() {
 
