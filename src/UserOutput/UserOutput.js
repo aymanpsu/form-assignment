@@ -1,10 +1,12 @@
 import React, {Component} from "react";
+import "./UserOutput.scss";
 
 class UserOutput extends Component {
   constructor(props) {
     super(props);
     // Just to see what was passed...
-    console.log("output:" + props);
+    console.log("output print")
+    console.log(props);
   }
   componentWillMount() {
 
