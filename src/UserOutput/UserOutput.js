@@ -1,4 +1,4 @@
-import React, {Component} from "react";
+import React, { Component } from "react";
 import "./UserOutput.scss";
 
 class UserOutput extends Component {
@@ -11,7 +11,7 @@ class UserOutput extends Component {
   componentWillMount() {
 
   }
-  render(){
+  render() {
     return (
       <div className="form-right">
         <h2>Profile</h2>

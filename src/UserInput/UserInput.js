@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import "./UserInput.scss";
 
 class UserInput extends Component {
-  constructor(){
+  constructor() {
     super();
     this.title = React.createRef();
     this.first_name = React.createRef();
@@ -11,22 +11,21 @@ class UserInput extends Component {
     this.company = React.createRef();
     this.business = React.createRef();
     this.employees = React.createRef();
-    this.state = {      
+    this.state = {
     }
     this.sendData = this.sendData.bind(this);
   }
   sendData = () => {
-     let person= 
-      {
-        "title": this.title.current.value,
-        "firstName": this.first_name.current.value,
-        "lastName": this.last_name.current.value,
-        "position": this.position.current.value,
-        "company": this.company.current.value,
-        "business_arena": this.business.current.value,
-        "category": this.employees.current.value
-      }
-    
+    let person =
+    {
+      "title": this.title.current.value,
+      "firstName": this.first_name.current.value,
+      "lastName": this.last_name.current.value,
+      "position": this.position.current.value,
+      "company": this.company.current.value,
+      "business_arena": this.business.current.value,
+      "category": this.employees.current.value
+    }
     console.log("input print")
     console.log(person.value)
     console.log("title: " + person.title);
